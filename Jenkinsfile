@@ -13,7 +13,7 @@ mavenNode {
   if (utils.isCI()) {
 
     mavenCI{
-      integrationTestCmd = "mvn clean install -Dnamespace.use.current=false -DenableImageStreamDetection=true -P openshift-it"
+      integrationTestCmd = "mvn org.apache.maven.plugins:maven-failsafe-plugin:integration-test ${kubeNS} -Dnamespace.use.current=false -DenableImageStreamDetection=true -P openshift-it -Dit.test=${config.itestPattern} -DfailIfNoTests=${config.failIfNoTests} org.apache.maven.plugins:maven-failsafe-plugin:verify"
     }
     
   } else if (utils.isCD()) {
