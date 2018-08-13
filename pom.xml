@@ -14,6 +14,7 @@
   <name>Vert.x - HTTP</name>
   <description>Exposes an HTTP API using Vert.x</description>
 
+ 
   
   <properties>
     <vertx.version>3.5.1.redhat-004</vertx.version>
