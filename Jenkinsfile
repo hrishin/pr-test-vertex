@@ -13,7 +13,7 @@ mavenNode {
   if (utils.isCI()) {
 
     mavenCI{
-      integrationTestCmd = "mvn clean install-Dnamespace.use.current=false -DenableImageStreamDetection=true -P openshift-it"
+      integrationTestCmd = "mvn clean install -Dnamespace.use.current=false -DenableImageStreamDetection=true -P openshift-it"
     }
     
   } else if (utils.isCD()) {
