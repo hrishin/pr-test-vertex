@@ -12,7 +12,7 @@ mavenNode {
   checkout scm
   if (utils.isCI()) {
 
-    mavenCI{
+    mavenCI {
       integrationTestCmd = "mvn org.apache.maven.plugins:maven-failsafe-plugin:integration-test -Dnamespace.use.current=false -DenableImageStreamDetection=true -P openshift-it -Dit.test=*IT -DfailIfNoTests=false org.apache.maven.plugins:maven-failsafe-plugin:verify"
       runTestsInUserNamespace = true
     }
